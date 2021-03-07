@@ -1,0 +1,34 @@
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp5dbpXX/user
+total 56
+-rw-r--r--  1 root  wheel  1832 Feb 27 19:49 __GIT_HISTORY
+-rw-r--r--  1 root  wheel  2208 Feb 27 19:49 get_next_line.c
+-rw-r--r--  1 root  wheel  1180 Feb 27 19:49 get_next_line.h
+-rw-r--r--  1 root  wheel  2208 Feb 27 19:49 get_next_line_bonus.c
+-rw-r--r--  1 root  wheel  1192 Feb 27 19:49 get_next_line_bonus.h
+-rw-r--r--  1 root  wheel  1789 Feb 27 19:49 get_next_line_utils.c
+-rw-r--r--  1 root  wheel  1789 Feb 27 19:49 get_next_line_utils_bonus.c
+
+= basic_tests ==================================================================
+>>>>>>>>>>> 1
+>>>>>>>>>>> 2
+>>>>>>>>>>> 3
+>>>>>>>>>>> 4
+
+>>>>>>>>>>> 5
+
+>>>>>>>>>>> 1
+>>>>>>>>>>> 2
+>>>>>>>>>>> 3
+>>>>>>>>>>> 4
+
+GNL OK
+Grade: 100
+
+= bonus_tests ==================================================================
+COMPILATION FAILED
+
+GNL KO
+Grade: 0
+
+= Final grade: 100 =============================================================
