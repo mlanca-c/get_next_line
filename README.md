@@ -22,11 +22,11 @@
 # Bonus
 
 # Results
- [1st try](results/1st try): 107% 
+ [1st try](results/1st_try): 107% 
  ```
  basic_tests: GNL OK | bonus_tests: GNL KO
  ```
- [2nd try](results/2nd try): 115%
+ [2nd try](results/2nd_try): 115%
  ```
  basic_tests: GNL OK | bonus_tests: GNL OK
  ```
