@@ -5,7 +5,10 @@
 
  1. [Intro](https://github.com/mlanca-c/get_next_line#intro)
  	* [Keywords](https://github.com/mlanca-c/get_next_line#keywords)
- 2. [Static Variables](https://github.com/mlanca-c/get_next_line#static-variables)
+ 2. [I/O System Calls](https://github.com/mlanca-c/get_next_line#io-system-calls)
+ 	* [File Descriptor](https://github.com/mlanca-c/get_next_line#file-descriptor)
+	* [Read Function in C](https://github.com/mlanca-c/get_next_line#read-function-in-c)
+ 3. [Static Variables](https://github.com/mlanca-c/get_next_line#static-variables)
 
 # Intro
 
