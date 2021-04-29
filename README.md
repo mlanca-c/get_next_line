@@ -44,6 +44,9 @@
  </details>
 
 ## Read Function in C
+
+ <details>
+
  ```read()``` attempts to read ```nbyte``` bytes of data from the object referenced by the descriptor ```fildes``` into the ```buffer``` pointed to by buf.
  ```c
  ssize_t read(int fildes, void *buf, size_t nbyte);
@@ -56,8 +59,6 @@
  **nbytes** is the requested number of bytes to read, this is not always equal to the return value of read(), since some times the read function call can read less than nbytes.
 
 ### BUFFER_SIZE
-
- <details>
 
  The ```BUFFER_SIZE``` will be used with the ```-D flag```.
  ```Shell
