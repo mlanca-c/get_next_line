@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 15:43:04 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/04/30 12:26:03 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/30 12:35:42 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,7 @@ int	return_value(int reader)
  */
 int	get_next_line(int fd, char **line)
 {
-	static char *saved[1024];
+	static char	*saved[1024];
 	char		*buf;
 	int			reader;
 
@@ -174,5 +174,5 @@ int	get_next_line(int fd, char **line)
 	free(buf);
 	*line = get_until_newline(saved[fd]);
 	saved[fd] = get_after_newline(saved[fd]);
-	return  (return_value(reader));
+	return (return_value(reader));
 }
