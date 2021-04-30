@@ -1,51 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/27 14:31:47 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/01 10:58:20 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/04/30 12:36:15 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/04/30 12:36:59 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-int		has_return(char *save)
+/**
+ * This function gets the lenght of a string.
+ *
+ * @param	char *s		string of characters.
+ *
+ * @return	lenght of s.
+ */
+int	ft_strlen(char *str)
 {
-	int		i;
-
-	if (!save)
-		return (0);
-	i = 0;
-	while (save[i])
-	{
-		if (save[i] == '\n')
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-int		ft_strlen(char *s)
-{
-	int		i;
+	int	i;
 
 	i = 0;
-	if (!s)
-		return (0);
-	while (s[i])
+	while (str[i])
 		i++;
 	return (i);
 }
 
+/**
+ * This function allocates sufficient memory for a copy of the string s, does
+ * the copy, and returns a pointer to it.
+ *
+ * @param char *s		string of characters.
+ *
+ * @return
+ * 	char *dst			copy of s.
+ */
 char	*ft_strdup(char *s)
 {
 	int		i;
 	char	*dst;
 
-	if (!(dst = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	dst = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!dst)
 		return (NULL);
 	i = 0;
 	while (s[i])
@@ -57,10 +56,19 @@ char	*ft_strdup(char *s)
 	return (dst);
 }
 
+/**
+ * This function creates a char * called tab, that allocates the necessary
+ * amount of memory to be able to contain s1 and s2 together.
+ *
+ * @param	char *s1	first string of characters being copied to tab.
+ * @param	char *s2	second string of characters being copied to tab.
+ *
+ * @returns		both strings joined in one string - tab.
+ */
 char	*ft_strjoin(char *s1, char *s2)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	char	*tab;
 
 	if (!s1 && !s2)
@@ -68,18 +76,16 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1)
 		return (ft_strdup(s2));
 	i = ft_strlen(s1) + ft_strlen(s2) + 1;
-	if (!(tab = (char *)malloc(sizeof(char) * i)))
+	tab = (char *)malloc(i * sizeof(char));
+	if (!tab)
 		return (NULL);
 	i = -1;
 	while (s1[++i])
 		tab[i] = s1[i];
 	j = -1;
 	while (s2[++j])
-	{
-		tab[i] = s2[j];
-		i++;
-	}
-	tab[i] = '\0';
+		tab[i + j] = s2[j];
+	tab[i + j] = '\0';
 	free(s1);
 	return (tab);
 }
