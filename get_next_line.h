@@ -5,24 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/27 14:30:23 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/02/27 17:02:05 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/04/29 15:43:24 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/04/29 17:45:20 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+/* 
+ * If for some reason the code get_next_line is not compile with the 
+ * -D BUFFER_SIZE=<int> - if BUFFER_SIZE is not defined, BUFFER_SIZE will be
+ * defined with 1 as it's value.
+*/
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
 
+/*
+ * used fr the read()
+*/
 # include <unistd.h>
+
+/*
+ * used for malloc() and free().
+*/
 # include <stdlib.h>
 
 int		get_next_line(int fd, char **line);
-int		has_return(char *save);
 char	*ft_strjoin(char *s1, char *s2);
-int		ft_strlen(char *s);
+int		ft_strlen(char *str);
 
 #endif
